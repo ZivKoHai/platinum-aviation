@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        accent: "var(--accent)",
+      },
+      fontFamily: {
+        geist: "var(--geist)",
+        bebasNeue: "var(--font-bebas-neue)",
       },
     },
   },
