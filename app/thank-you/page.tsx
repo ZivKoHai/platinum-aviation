@@ -2,9 +2,10 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 
-export default function ThankYou() {
+// Create a separate component for the main content
+function ThankYouContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -124,5 +125,14 @@ export default function ThankYou() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Wrap the content component with Suspense in the main component
+export default function ThankYou() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ThankYouContent />
+    </Suspense>
   );
 }
