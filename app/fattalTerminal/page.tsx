@@ -218,7 +218,7 @@ export default function FattalTerminal() {
       <Hero
         title="Fattal Terminal"
         description="Experience exclusive and personalized hospitality at Fattal Terminal tlv, the first of its kind in Israel. Our private terminal is tailored to meet your unique needs, whether you’re arriving or departing from Israel on a private or commercial flight, or are a member of an aircrew from anywhere in the world."
-        backgroundImage="/fattal-terminal/fattal-terminal-1.jpeg"
+        backgroundImage="/fattal-terminal.webp"
       />
       <Description
         title="luxury at the airport terminal"

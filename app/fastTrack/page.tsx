@@ -1,12 +1,15 @@
 import Image from "next/image";
 import { Hero } from "../components/Hero";
 import { Button } from "../components/ui/Button";
-import { ChartItem } from "../components/ui/Chart";
-import { H2Aviation } from "../components/ui/H2Aviation";
-import { Paviation } from "../components/ui/Paviation";
+
 import { Process } from "../components/ui/Process";
 import { FAQ } from "../components/Faq";
 import { Metadata } from "next";
+import {
+  BuildingOfficeIcon,
+  UserPlusIcon,
+  BellSnoozeIcon,
+} from "@heroicons/react/20/solid";
 
 export const metadata: Metadata = {
   title: "Fast Track | VIP Airport Services",
@@ -104,6 +107,27 @@ const faq = [
   },
 ];
 
+const benefits = [
+  {
+    name: "personal greeter",
+    description:
+      "Enjoy a peaceful and private atmosphere like no other in our lounge. Your privacy is our priority. away from the hustle and bustle of the airport",
+    icon: UserPlusIcon,
+  },
+  {
+    name: "private hall",
+    description:
+      "private hall for the most crowded process of the journey - check in",
+    icon: BuildingOfficeIcon,
+  },
+  {
+    name: "comfort",
+    description:
+      "The greeter takes care of all the challenging tasks—you simply follow their lead, and everything will be handled as quickly and efficiently as possible.",
+    icon: BellSnoozeIcon,
+  },
+];
+
 export default function FastTrack() {
   return (
     <>
@@ -136,19 +160,54 @@ export default function FastTrack() {
           />
         </div>
       </div>
-      <section className="wDyn h-fit py-10">
-        <div className="flex flex-col items-center justify-center gap-4">
-          <H2Aviation>why choose fast track?</H2Aviation>
-          <Paviation>
-            From the moment you step into Ben Gurion Airport, our TLV Airport
-            Meet and Greet service sets the tone for a premium experience. Our
-            friendly and professional staff will be there to welcome you,
-            guiding you through every step of your airport journey. With our
-            specialized assistance, you can bypass the usual stresses of airport
-            procedures.
-          </Paviation>
+      <section className="h-fit py-10">
+        <div className="overflow-hidden bg-background py-24 sm:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+              <div className="lg:pr-8 lg:pt-4">
+                <div className="lg:max-w-lg">
+                  <h2 className="text-base/7 font-semibold text-accent">
+                    Award-Winning Service
+                  </h2>
+                  <p className="mt-2 text-pretty text-4xl font-medium tracking-tight text-foreground sm:text-5xl">
+                    why choose fast track?
+                  </p>
+                  <p className="mt-6 text-lg/8 text-gray-600">
+                    From the moment you step into Ben Gurion Airport, our TLV
+                    Airport Meet and Greet service sets the tone for a premium
+                    experience. Our friendly and professional staff will be
+                    there to welcome you, guiding you through every step of your
+                    airport journey. With our specialized assistance, you can
+                    bypass the usual stresses of airport procedures.
+                  </p>
+                  <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+                    {benefits.map((feature) => (
+                      <div key={feature.name} className="relative pl-9">
+                        <dt className="inline font-semibold text-gray-900">
+                          <feature.icon
+                            aria-hidden="true"
+                            className="absolute left-1 top-1 size-5 text-accent"
+                          />
+                          {feature.name}
+                        </dt>{" "}
+                        <dd className="inline">{feature.description}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              </div>
+              <Image
+                alt="ben gurion airport"
+                src="/benefits-1.png"
+                width={2432}
+                height={1442}
+                sizes="100vw"
+                className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+              />
+            </div>
+          </div>
         </div>
-        <div className="mt-20 flex md:flex-row flex-col items-end justify-end gap-4">
+        {/* <div className="mt-20 flex md:flex-row flex-col items-end justify-end gap-4">
           <ChartItem
             number="personal greeter"
             description="Enjoy a peaceful and private atmosphere like no other in our lounge. Your privacy is our priority. away from the hustle and bustle of the airport."
@@ -168,7 +227,7 @@ journey - check in"
             height="h-[400px]"
             backgroundColor="bg-accent"
           />
-        </div>
+        </div> */}
       </section>
       <section id="arrival" className="wDyn h-fit py-10">
         <div className="flex flex-col items-center justify-center gap-4">

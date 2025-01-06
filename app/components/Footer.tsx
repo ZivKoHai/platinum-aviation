@@ -68,7 +68,7 @@ export const Footer = () => {
 
       <div className="border-t border-white py-5 h-15 flex sm:flex-row flex-col justify-between w-full bg-black text-white px-10">
         <div>
-          <p>© 2024 Ben Gurion Airport VIP Services</p>
+          <p>© 2025 Ben Gurion Airport VIP Services</p>
         </div>
         <div>
           <Link href="/terms-conditions">Terms & Conditions</Link>
