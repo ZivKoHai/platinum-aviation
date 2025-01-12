@@ -70,8 +70,9 @@ export const Footer = () => {
         <div>
           <p>© 2025 Ben Gurion Airport VIP Services</p>
         </div>
-        <div>
+        <div className="flex flex-row gap-10">
           <Link href="/terms-conditions">Terms & Conditions</Link>
+          <Link href="/cancelPolicy">Cancellation Policy</Link>
         </div>
         <div>
           This site is protected by reCAPTCHA and the Google{" "}
