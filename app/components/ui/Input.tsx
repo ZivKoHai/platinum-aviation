@@ -12,7 +12,7 @@ export const Input = ({
       name={name}
       type={type}
       placeholder={placeholder}
-      className="border-b-[0.5px] border-black  p-2 bg-transparent placeholder:text-black"
+      className="border-b-[0.5px] border-textColor p-2 bg-transparent placeholder:text-textColor"
     />
   );
 };

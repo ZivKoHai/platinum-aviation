@@ -23,7 +23,9 @@ export const Process = ({ tabs, isTab }: ProcessProps) => {
             <div
               key={index}
               className={`h-full basis-1/3 flex items-center justify-center font-medium cursor-pointer transition-all duration-300 ease-in-out ${
-                tabActive === index ? "border-b-[1px] pb-4 border-black" : ""
+                tabActive === index
+                  ? "border-b-[1px] pb-4 border-textColor"
+                  : ""
               }`}
               onClick={() => setTabActive(index)}
             >
@@ -33,14 +35,14 @@ export const Process = ({ tabs, isTab }: ProcessProps) => {
         </div>
       )}
       <div className="my-10">
-        <ol className="relative border-s border-[#1E1E1E]">
+        <ol className="relative border-s border-textColor">
           {Object.entries(tabs[tabActive].process).map(([key, value]) => (
             <li key={key} className="mb-10 ms-8">
-              <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-              <time className="mb-1 text-sm font-normal leading-none text-[#1E1E1E]">
+              <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-textColor"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-textColor">
                 {value.name}
               </time>
-              <p className="font-medium text-xl text-black tracking-tight">
+              <p className="font-medium text-xl text-textColor tracking-tight">
                 {value.description}
               </p>
             </li>

@@ -62,13 +62,13 @@ export const Seamless = () => {
     <section className="wDyn mt-20">
       <div className="flex flex-col gap-10">
         <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-          <h2 className="text-4xl font-bold text-left">
+          <h2 className="text-4xl font-medium text-left text-textColor font-serif">
             Seamless Travel, Elevated Comfort
           </h2>
           <Button>Book Now</Button>
         </div>
         <div>
-          <p>
+          <p className="text-textColor">
             Experience unparalleled luxury and efficiency with our VIP airport
             services at Ben Gurion Airport. From fast-track check-in and
             security procedures to exclusive access to the Arbel and Fattal
@@ -84,7 +84,9 @@ export const Seamless = () => {
       </div>
       <div className="flex flex-col gap-10 mt-10">
         <div>
-          <h4 className="text-2xl font-medium">Our process - step by step</h4>
+          <h4 className="text-2xl font-medium text-textColor">
+            Our process - step by step
+          </h4>
         </div>
       </div>
       <Process tabs={Tabs} isTab={true} />

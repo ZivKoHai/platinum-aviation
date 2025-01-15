@@ -10,6 +10,7 @@ import {
   UserPlusIcon,
   BellSnoozeIcon,
 } from "@heroicons/react/20/solid";
+import { WhyChooseUs } from "../components/whyChooseUs";
 
 export const metadata: Metadata = {
   title: "Fast Track | VIP Airport Services",
@@ -139,7 +140,7 @@ export default function FastTrack() {
       />
       <div className="wDyn py-20 grid grid-cols-1 sm:grid-cols-2 gap-10">
         <div className="flex flex-col gap-4 justify-center ">
-          <h2 className="text-4xl text-left w-full font-medium">
+          <h2 className="text-4xl text-left w-full font-medium font-serif">
             Your Travel Begins Here.
           </h2>
           <p className="text-base tracking-tight">
@@ -161,77 +162,29 @@ export default function FastTrack() {
         </div>
       </div>
       <section className="h-fit py-10">
-        <div className="overflow-hidden bg-background py-24 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-              <div className="lg:pr-8 lg:pt-4">
-                <div className="lg:max-w-lg">
-                  <h2 className="text-base/7 font-semibold text-accent">
-                    Award-Winning Service
-                  </h2>
-                  <p className="mt-2 text-pretty text-4xl font-medium tracking-tight text-foreground sm:text-5xl">
-                    why choose fast track?
-                  </p>
-                  <p className="mt-6 text-lg/8 text-gray-600">
-                    From the moment you step into Ben Gurion Airport, our TLV
+        <WhyChooseUs
+          title="Award-Winning Service"
+          subtitle="why choose fast track?"
+          description="From the moment you step into Ben Gurion Airport, our TLV
                     Airport Meet and Greet service sets the tone for a premium
                     experience. Our friendly and professional staff will be
                     there to welcome you, guiding you through every step of your
                     airport journey. With our specialized assistance, you can
-                    bypass the usual stresses of airport procedures.
-                  </p>
-                  <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
-                    {benefits.map((feature) => (
-                      <div key={feature.name} className="relative pl-9">
-                        <dt className="inline font-semibold text-gray-900">
-                          <feature.icon
-                            aria-hidden="true"
-                            className="absolute left-1 top-1 size-5 text-accent"
-                          />
-                          {feature.name}
-                        </dt>{" "}
-                        <dd className="inline">{feature.description}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                </div>
-              </div>
-              <Image
-                alt="ben gurion airport"
-                src="/benefits-1.png"
-                width={2432}
-                height={1442}
-                sizes="100vw"
-                className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-              />
-            </div>
-          </div>
-        </div>
-        {/* <div className="mt-20 flex md:flex-row flex-col items-end justify-end gap-4">
-          <ChartItem
-            number="personal greeter"
-            description="Enjoy a peaceful and private atmosphere like no other in our lounge. Your privacy is our priority. away from the hustle and bustle of the airport."
-            backgroundColor="bg-black"
-          />
-          <ChartItem
-            number="private hall"
-            description="private hall for the most crowded process of the 
-journey - check in"
-            height="h-[500px]"
-            backgroundColor="bg-primary"
-          />
-          <ChartItem
-            number="comfort"
-            title="Travel Stress-Free"
-            description="The greeter takes care of all the challenging tasks—you simply follow their lead, and everything will be handled as quickly and efficiently as possible."
-            height="h-[400px]"
-            backgroundColor="bg-accent"
-          />
-        </div> */}
+                    bypass the usual stresses of airport procedures."
+          benefits={benefits}
+          image={{
+            src: "/benefits-1.png",
+            alt: "ben gurion airport",
+            width: 2432,
+            height: 1442,
+          }}
+        />
       </section>
       <section id="arrival" className="wDyn h-fit py-10">
         <div className="flex flex-col items-center justify-center gap-4">
-          <h2 className="text-4xl text-left w-full font-medium">Arrivals</h2>
+          <h2 className="text-4xl text-left w-full font-medium font-serif">
+            Arrivals
+          </h2>
           <p className="text-base tracking-tight">
             Experience a warm and hassle-free arrival with our Fast Track
             Service. From the moment you step off the aircraft, our dedicated
@@ -245,7 +198,9 @@ journey - check in"
       </section>
       <section id="departures" className="wDyn h-fit py-10">
         <div className="flex flex-col items-center justify-center gap-4">
-          <h2 className="text-4xl text-left w-full font-medium">Departures</h2>
+          <h2 className="text-4xl text-left w-full font-medium font-serif">
+            Departures
+          </h2>
           <p className="text-base tracking-tight">
             Transform your airport departure into a luxurious experience with
             our Fast Track Service. From the moment you arrive, our professional

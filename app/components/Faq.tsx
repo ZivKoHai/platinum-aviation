@@ -26,12 +26,12 @@ export const FAQ = ({
         {faqItems.map((item, index) => (
           <details
             key={index}
-            className="border-b-[1px] py-2 border-black hover:cursor-pointer"
+            className="border-b-[1px] py-2 border-textColor hover:cursor-pointer"
           >
-            <summary className="sm:text-lg text-base font-light">
+            <summary className="sm:text-lg text-base font-light text-textColor">
               {item.question}
             </summary>
-            <p className="sm:text-base text-sm font-light py-2">
+            <p className="sm:text-base text-sm font-light py-2 text-textColor">
               {item.answer}
             </p>
           </details>

@@ -158,7 +158,7 @@ export const Form = () => {
       )}
       <button
         type="submit"
-        className="bg-black text-white px-5 py-2 rounded-[10px]"
+        className="bg-textColor text-black px-5 py-2 rounded-[10px]"
       >
         Submit
       </button>

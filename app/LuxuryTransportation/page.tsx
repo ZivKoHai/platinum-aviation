@@ -7,6 +7,8 @@ import { Paviation } from "../components/ui/Paviation";
 import { FAQ } from "../components/Faq";
 import { Metadata } from "next";
 import ImagesContainer from "../components/ui/ImagesConatiner";
+import { WhyChooseUs } from "../components/whyChooseUs";
+import { ClockIcon, MapIcon, UsersIcon } from "@heroicons/react/20/solid";
 
 export const metadata: Metadata = {
   title: "Luxury Transportation | Platinum",
@@ -84,6 +86,27 @@ const Images: { src: string; alt: string }[] = [
   },
 ];
 
+const benefits = [
+  {
+    name: "Hourly Service",
+    description:
+      "Pay by the hour and experience the luxury of having a premium vehicle and a private driver at your disposal",
+    icon: ClockIcon,
+  },
+  {
+    name: "Large Groups",
+    description:
+      "Travel in comfort with your entire group. Our fleet includes spacious vehicles designed to accommodate large parties, making it easy to travel together in style and convenience",
+    icon: UsersIcon,
+  },
+  {
+    name: "Hotel to Airport (or Vice Versa)",
+    description:
+      "Simplify your travel with our direct transfer service. Whether you’re heading to the airport or arriving from a flight, we provide a smooth and luxurious ride",
+    icon: MapIcon,
+  },
+];
+
 export default function LuxuryTransportation() {
   return (
     <>
@@ -98,7 +121,7 @@ export default function LuxuryTransportation() {
       />
       <div className="wDyn py-20 grid grid-cols-1 sm:grid-cols-2 gap-10">
         <div className="flex flex-col gap-4 justify-center ">
-          <h2 className="text-4xl text-left w-full font-medium">
+          <h2 className="text-4xl text-left w-full font-serif">
             Platinum Private Car Service
           </h2>
           <p className="text-base tracking-tight">
@@ -113,7 +136,7 @@ export default function LuxuryTransportation() {
         </div>
         <div className="flex flex-col gap-4">
           <Image
-            src="/platinum-car-service-2.webp"
+            src="/luxury-transport/luxury-transport (2).jpg"
             alt="luxury transportation"
             width={500}
             height={500}
@@ -121,9 +144,21 @@ export default function LuxuryTransportation() {
           />
         </div>
       </div>
+      <WhyChooseUs
+        title="Award-Winning Service"
+        subtitle="why choose platinum for your luxury transportation?"
+        description="Platinum private car service offers a seamless and luxurious transportation experience tailored to your needs. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a stress-free and comfortable ride."
+        benefits={benefits}
+        image={{
+          src: "/luxury-transport/luxury-transport (2).jpg",
+          alt: "ben gurion airport",
+          width: 2432,
+          height: 1442,
+        }}
+      />
       <div className="wDyn py-20">
         <div className="flex flex-col gap-4">
-          <H2Aviation>why choose our luxury transportation</H2Aviation>
+          <H2Aviation>Multiple Vehicles Choices</H2Aviation>
           <Paviation>
             Experience premium comfort with our luxury transportation services,
             available by the hour for all your travel needs. Whether you&apos;re
@@ -141,12 +176,18 @@ export default function LuxuryTransportation() {
               className="object-cover"
             />
           </div>
-          <div className="rounded-[10px] min-h-[300px] bg-black overflow-hidden p-5 flex flex-col justify-end gap-2">
-            <h4 className="text-xl font-bold text-white">Hourly Service</h4>
-            <p className="text-sm tracking-tight text-white">
-              Pay by the hour and experience the luxury of having a premium
-              vehicle and a private driver at your disposal
-            </p>
+          <div className="rounded-[10px] min-h-[300px] relative overflow-hidden">
+            <Image
+              src="/luxury-transport/luxury-transport- (2).jpg"
+              alt="luxury transportation"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-end p-5">
+              <h4 className="text-xl font-bold text-white z-10">
+                Executive Sedans
+              </h4>
+            </div>
           </div>
           <div className="rounded-[10px] min-h-[300px] relative overflow-hidden">
             <Image
@@ -156,15 +197,16 @@ export default function LuxuryTransportation() {
               className="object-cover"
             />
           </div>
-          <div className="rounded-[10px] bg-primary min-h-[300px] overflow-hidden p-5 flex flex-col justify-end gap-2">
-            <h4 className="text-xl font-bold text-white">
-              Hotel to Airport (or Vice Versa)
-            </h4>
-            <p className="text-sm tracking-tight text-white">
-              Simplify your travel with our direct transfer service. Whether
-              you’re heading to the airport or arriving from a flight, we
-              provide a smooth and luxurious ride
-            </p>
+          <div className="rounded-[10px] min-h-[300px] relative overflow-hidden">
+            <Image
+              src="/luxury-transport/luxury-transport- (2).jpg"
+              alt="luxury transportation"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-end p-5">
+              <h4 className="text-xl font-bold text-white z-10">Luxury SUVs</h4>
+            </div>
           </div>
           <div className="rounded-[10px] min-h-[300px] relative overflow-hidden ">
             <Image
@@ -174,13 +216,16 @@ export default function LuxuryTransportation() {
               className="object-cover"
             />
           </div>
-          <div className="rounded-[10px] min-h-[300px] bg-primary overflow-hidden p-5 flex flex-col justify-end gap-2">
-            <h4 className="text-xl font-bold text-white">Large Groups</h4>
-            <p className="text-sm tracking-tight text-white">
-              Travel in comfort with your entire group. Our fleet includes
-              spacious vehicles designed to accommodate large parties, making it
-              easy to travel together in style and convenience
-            </p>
+          <div className="rounded-[10px] min-h-[300px] relative overflow-hidden">
+            <Image
+              src="/luxury-transport/luxury-transport- (2).jpg"
+              alt="luxury transportation"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-end p-5">
+              <h4 className="text-xl font-bold text-white z-10">Luxury Vans</h4>
+            </div>
           </div>
         </div>
       </div>

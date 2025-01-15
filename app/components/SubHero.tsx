@@ -92,7 +92,7 @@ export function SubHero() {
   ];
 
   return (
-    <section id="services" className="wDyn h-fit py-10">
+    <section id="services" className="wDyn h-fit py-10 text-textColor">
       <div className="flex flex-col items-center justify-center gap-4">
         <H2Aviation>our services</H2Aviation>
         <Paviation>

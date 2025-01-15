@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Serif_Display } from "next/font/google";
 import "./globals.css";
-// import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { Bebas_Neue } from "next/font/google";
 import Script from "next/script";
@@ -9,6 +8,12 @@ import NavComponent from "./components/ui/NavComponent";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const notoSerifDisplay = Noto_Serif_Display({
+  variable: "--font-noto-serif-display",
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -46,7 +51,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${notoSerifDisplay.variable} antialiased`}
       >
         <Script
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}

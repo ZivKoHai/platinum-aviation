@@ -24,14 +24,14 @@ export const SelectInput = ({
 }: SelectInputProps) => {
   return (
     <div className="flex flex-col gap-2 w-full">
-      <label htmlFor={name} className="text-sm text-black">
+      <label htmlFor={name} className="text-sm text-textColor">
         {label}
       </label>
       <select
         name={name}
         multiple={multiple}
         defaultValue={defaultValue}
-        className="border-b-[0.5px] border-black p-2 bg-transparent placeholder:text-black w-full"
+        className="border-b-[0.5px] border-textColor p-2 bg-transparent placeholder:text-textColor w-full"
       >
         <option value="" disabled>
           {placeholder}

@@ -7,7 +7,10 @@ export function Button({
   href?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <button {...props} className="bg-black text-white px-5 py-2 rounded-[10px]">
+    <button
+      {...props}
+      className="bg-textColor text-black px-5 py-2 rounded-[10px]"
+    >
       <a href={href}>{children}</a>
     </button>
   );

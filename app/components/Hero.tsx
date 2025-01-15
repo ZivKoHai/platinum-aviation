@@ -17,9 +17,9 @@ export function Hero({
 }: HeroProps) {
   return (
     <div
-      className={`w-full md:w-[calc(100%-5rem)] px-5 md:px-0 h-screen bg-cover bg-center bg-opacity-50 md:mx-auto rounded-none sm:rounded-[10px] flex flex-col justify-center items-center gap-5 relative before:content-[''] before:absolute before:inset-0 before:bg-black before:sm:rounded-[10px] before:opacity-20`}
+      className={`w-full md:w-[calc(100%-5rem)] px-5 md:px-0 h-screen md:mx-auto rounded-none sm:rounded-[10px] flex flex-col justify-center items-center gap-5 relative`}
     >
-      <div className="absolute inset-0 -z-10 before:absolute before:inset-0 before:bg-black before:opacity-30 before:sm:rounded-[10px] before:z-40 rounded-none sm:rounded-[10px]">
+      <div className="absolute inset-0">
         <Image
           quality={100}
           src={backgroundImage}
@@ -29,6 +29,7 @@ export function Hero({
           priority
           sizes="(max-width: 768px) 100vw, 50vw"
         />
+        <div className="absolute inset-0 bg-black/30 rounded-none sm:rounded-[10px]" />
       </div>
       <span className="text-lg w-full md:w-auto capitalize font-medium text-left sm:text-center text-white z-10">
         {subtitle}

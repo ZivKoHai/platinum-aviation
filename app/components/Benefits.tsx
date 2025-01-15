@@ -39,10 +39,10 @@ export const Benefits = () => {
           />
         </div>
         <div className="rounded-[10px] min-h-[300px] bg-black overflow-hidden p-5 flex flex-col justify-end gap-2">
-          <h4 className="text-xl font-bold text-white">
+          <h4 className="text-xl font-bold text-textColor">
             Comfort and Convenience
           </h4>
-          <p className="text-sm tracking-tight text-white">
+          <p className="text-sm tracking-tight text-textColor">
             Relax with access to exclusive lounges, open bars, and private
             transportation for seamless travel.
           </p>
@@ -56,10 +56,10 @@ export const Benefits = () => {
           />
         </div>
         <div className="rounded-[10px] bg-primary min-h-[300px] overflow-hidden p-5 flex flex-col justify-end gap-2">
-          <h4 className="text-xl font-bold text-white">
+          <h4 className="text-xl font-bold text-textColor">
             Save Time and Skip Lines
           </h4>
-          <p className="text-sm tracking-tight text-white">
+          <p className="text-sm tracking-tight text-textColor">
             Enjoy fast-track check-in, security, and passport control,
             eliminating long waits.
           </p>
@@ -73,10 +73,10 @@ export const Benefits = () => {
           />
         </div>
         <div className="rounded-[10px] min-h-[300px] bg-primary overflow-hidden p-5 flex flex-col justify-end gap-2">
-          <h4 className="text-xl font-bold text-white">
+          <h4 className="text-xl font-bold text-textColor">
             Personalized Attention
           </h4>
-          <p className="text-sm tracking-tight text-white">
+          <p className="text-sm tracking-tight text-textColor">
             Receive tailored assistance from our dedicated team, ensuring your
             experience is seamless and stress-free.
           </p>
