@@ -13,19 +13,19 @@ export function WhyUs() {
     {
       name: "1k",
       description:
-        "Platinum gave sevice for more than 1,000 client in ben gurion airport",
+        "Sky Vip gave sevice for more than 1,000 client in ben gurion airport",
       icon: BuildingOfficeIcon,
     },
     {
       name: "1M+",
       description:
-        "Platinum chauffeurs went through more then 10 million miles with clients in the back",
+        "Sky Vip chauffeurs went through more then 10 million miles with clients in the back",
       icon: LifebuoyIcon,
     },
     {
       name: "100",
       description:
-        "Platinum crew members are waiting for your arrival at ben gurion airport to welcome you into our vip",
+        "Sky Vip crew members are waiting for your arrival at ben gurion airport to welcome you into our vip",
       icon: UserIcon,
     },
   ];
@@ -62,7 +62,7 @@ export function WhyUs() {
           </div>
           <div>
             <span className="font-normal text-white text-xl">
-              platinum gave sevice for more than 1,000 client in ben gurion
+              Sky Vip gave sevice for more than 1,000 client in ben gurion
               airport
             </span>
           </div>
@@ -76,7 +76,7 @@ export function WhyUs() {
               Miles our clients passed
             </span>
             <span className="font-normal text-white text-xl">
-              platinum chauffeurs went through more then 10 million miles with
+              Sky Vip chauffeurs went through more then 10 million miles with
               clients in the back
             </span>
           </div>
@@ -88,7 +88,7 @@ export function WhyUs() {
           <div className="flex flex-col gap-2">
             <span className="font-bold text-white text-2xl">crew members</span>
             <span className="font-normal text-white text-xl">
-              platinum crew members are waiting for your arrival at ben gurion
+              Sky Vip crew members are waiting for your arrival at ben gurion
               airport to welcome you into our vip
             </span>
           </div>

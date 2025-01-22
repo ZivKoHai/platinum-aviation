@@ -29,7 +29,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Platinum Aviation",
+  title: "Sky Vip Aviation",
   description:
     "Ben gurion airport vip | fast track ben gurion | vip ben gurion",
 };

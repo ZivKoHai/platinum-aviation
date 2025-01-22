@@ -24,17 +24,19 @@ export function Policy({ sections }: PolicyProps) {
           className={`flex flex-col md:flex-row gap-8 items-center ${index > 0 ? "mt-16" : ""}`}
         >
           <div className="flex-1 space-y-6">
-            <h3 className="text-2xl font-semibold text-accent">
+            <h3 className="text-2xl font-semibold text-accent text-textColor">
               {section.title}
             </h3>
             {section.content.map((item) => (
               <div key={item.heading} className="space-y-3">
-                <h4 className="text-lg font-medium">{item.heading}</h4>
+                <h4 className="text-lg font-medium text-textColor">
+                  {item.heading}
+                </h4>
                 <ul className="space-y-2">
                   {item.details.map((detail, i) => (
-                    <li key={i} className="text-gray-600 flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>{detail}</span>
+                    <li key={i} className="text-textColor flex items-start">
+                      <span className="mr-2 text-textColor">•</span>
+                      <span className="text-textColor">{detail}</span>
                     </li>
                   ))}
                 </ul>

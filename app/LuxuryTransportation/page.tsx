@@ -11,9 +11,9 @@ import { WhyChooseUs } from "../components/whyChooseUs";
 import { ClockIcon, MapIcon, UsersIcon } from "@heroicons/react/20/solid";
 
 export const metadata: Metadata = {
-  title: "Luxury Transportation | Platinum",
+  title: "Luxury Transportation | Sky Vip",
   description:
-    "Experience the ultimate in luxury and comfort with Platinum's luxury car service. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a seamless and luxurious transportation experience tailored to your needs.",
+    "Experience the ultimate in luxury and comfort with Sky Vip's luxury car service. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a seamless and luxurious transportation experience tailored to your needs.",
   keywords:
     "luxury transport ben gurion, luxury car service, private car service, luxury transportation, luxury car service ben gurion, private car service ben gurion, luxury transportation ben gurion, luxury car service ben gurion, private car service ben gurion, luxury transportation ben gurion  ",
 };
@@ -113,7 +113,7 @@ export default function LuxuryTransportation() {
       <Hero
         backgroundImage="/luxury-transportation.jpeg"
         title="luxury transportation"
-        description="Experience the ultimate in style and comfort with Platinum's luxury car service. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a seamless and luxurious transportation experience tailored to your needs."
+        description="Experience the ultimate in style and comfort with Sky Vip's luxury car service. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a seamless and luxurious transportation experience tailored to your needs."
       />
       <Description
         title="Your Ride To Relaxation & Comfort"
@@ -122,7 +122,7 @@ export default function LuxuryTransportation() {
       <div className="wDyn py-20 grid grid-cols-1 sm:grid-cols-2 gap-10">
         <div className="flex flex-col gap-4 justify-center ">
           <h2 className="text-4xl text-left w-full font-serif">
-            Platinum Private Car Service
+            Sky Vip Private Car Service
           </h2>
           <p className="text-base tracking-tight">
             From elegant sedans to spacious SUVs, our premium selection ensures
@@ -146,8 +146,8 @@ export default function LuxuryTransportation() {
       </div>
       <WhyChooseUs
         title="Award-Winning Service"
-        subtitle="why choose platinum for your luxury transportation?"
-        description="Platinum private car service offers a seamless and luxurious transportation experience tailored to your needs. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a stress-free and comfortable ride."
+        subtitle="why choose Sky Vip for your luxury transportation?"
+        description="Sky Vip private car service offers a seamless and luxurious transportation experience tailored to your needs. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a stress-free and comfortable ride."
         benefits={benefits}
         image={{
           src: "/luxury-transport/luxury-transport (2).jpg",

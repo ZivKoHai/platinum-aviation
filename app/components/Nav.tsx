@@ -14,7 +14,7 @@ export function Nav() {
   return (
     <nav className="z-50 h-16 bg-color-1 flex justify-between items-center py-10 rounded-lg mx-3 px-5">
       <Link href={"/"} className="h-10">
-        <Logo color="#000" />
+        <Logo color="#000" size={9} />
       </Link>
 
       {/* <!-- Toggle Button for Mobile --> */}

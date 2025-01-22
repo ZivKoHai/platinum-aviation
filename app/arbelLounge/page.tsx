@@ -65,7 +65,7 @@ export default function ArbelLounge() {
         {
           name: "Personalized Greeting",
           description:
-            "Upon arrival at the airport, a dedicated Platinum agent will meet you and assist with your luggage.",
+            "Upon arrival at the airport, a dedicated Sky Vip agent will meet you and assist with your luggage.",
         },
         {
           name: "Private Security Check",

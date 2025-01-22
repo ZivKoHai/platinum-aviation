@@ -111,7 +111,7 @@ export default function CancelPolicy() {
       <div className="flex justify-start">
         <div className="max-w-md">
           <h3 className="text-xl font-semibold mb-4">Need Support?</h3>
-          <p className="text-gray-600">
+          <p className="text-textColor">
             Our customer support team is available 24/7:
           </p>
           <ul className="mt-2 space-y-2">
