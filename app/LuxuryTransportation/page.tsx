@@ -9,9 +9,10 @@ import { Metadata } from "next";
 import ImagesContainer from "../components/ui/ImagesConatiner";
 import { WhyChooseUs } from "../components/whyChooseUs";
 import { ClockIcon, MapIcon, UsersIcon } from "@heroicons/react/20/solid";
+import { globalConfig } from "@/global-config";
 
 export const metadata: Metadata = {
-  title: "Luxury Transportation | Sky Vip",
+  title: `${globalConfig.appName} | Luxury Transportation `,
   description:
     "Experience the ultimate in luxury and comfort with Sky Vip's luxury car service. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a seamless and luxurious transportation experience tailored to your needs.",
   keywords:

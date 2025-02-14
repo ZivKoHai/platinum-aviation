@@ -3,9 +3,9 @@ import { Process } from "../components/ui/Process";
 import { Description } from "../components/ui/Description";
 import { FAQ } from "../components/Faq";
 import ImagesContainer from "../components/ui/ImagesConatiner";
-
+import { globalConfig } from "@/global-config";
 export const metadata = {
-  title: "Fattal Terminal | VIP Airport Services",
+  title: `${globalConfig.appName} | Fattal Terminal`,
   description:
     "Experience the luxury of Fattal Terminal at Ben Gurion Airport. Enjoy exclusive amenities, gourmet dining, and premium services in our world-class airport lounge.",
   keywords:

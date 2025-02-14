@@ -23,6 +23,13 @@ body {
   scroll-behavior: smooth;
 }
 
+.subgrid {
+  display: subgrid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
 #sidebar-active:checked ~ #overlay {
   display: block;
   position: fixed;

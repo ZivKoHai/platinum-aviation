@@ -16,6 +16,7 @@ export const Footer = () => {
       href: "mailto:vip@bengurionairport.com",
     },
     { name: "052-777-2564", href: "tel:0527772564" },
+    { name: "+1-(929)-563-2500", href: "tel:9295632500" },
   ];
 
   const socialLinks = [{ name: "Instagram", href: "https://instagram.com" }];

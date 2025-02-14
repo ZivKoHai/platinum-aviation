@@ -11,9 +11,10 @@ import {
   BellSnoozeIcon,
 } from "@heroicons/react/20/solid";
 import { WhyChooseUs } from "../components/whyChooseUs";
+import { globalConfig } from "@/global-config";
 
 export const metadata: Metadata = {
-  title: "Fast Track | VIP Airport Services",
+  title: `${globalConfig.appName} | Fast Track`,
   description: "Fast Track at Ben Gurion Airport",
   keywords: "Fast Track, Ben Gurion Airport, VIP Service, Airport Experience",
 };

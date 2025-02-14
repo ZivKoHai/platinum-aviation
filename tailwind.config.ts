@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import typography from "@tailwindcss/typography";
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +8,78 @@ export default {
   ],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            color: "var(--foreground)",
+            img: {
+              borderRadius: "10px",
+            },
+            strong: {
+              color: "var(--foreground)",
+              "font-weight": 200,
+            },
+            a: {
+              color: "var(--foreground)",
+              "&:hover": {
+                color: "var(--foreground)",
+              },
+            },
+            p: {
+              "font-weight": 300,
+              color: "var(--foreground)",
+              lineHeight: "1.8",
+              margin: "1.5em 0",
+              letterSpacing: "0.01em",
+              fontSize: "1.125rem",
+            },
+            h1: {
+              "font-weight": 200,
+              color: "var(--foreground)",
+            },
+            h2: {
+              "font-weight": 200,
+              color: "var(--foreground)",
+              fontSize: "2.5rem",
+            },
+            h3: {
+              "font-weight": 200,
+              color: "var(--foreground)",
+              fontSize: "2rem",
+            },
+            h4: {
+              "font-weight": 200,
+              color: "var(--foreground)",
+            },
+            h5: {
+              "font-weight": 200,
+              color: "var(--foreground)",
+            },
+            h6: {
+              "font-weight": 200,
+              color: "var(--foreground)",
+            },
+            blockquote: {
+              color: "var(--foreground)",
+            },
+            code: {
+              color: "var(--foreground)",
+            },
+            figcaption: {
+              color: "var(--foreground)",
+            },
+            ul: {
+              color: "var(--foreground)",
+            },
+            ol: {
+              color: "var(--foreground)",
+            },
+            li: {
+              color: "var(--foreground)",
+            },
+          },
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -21,5 +93,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 } satisfies Config;

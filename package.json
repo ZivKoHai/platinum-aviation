@@ -16,6 +16,7 @@
     "@react-email/font": "0.0.9",
     "embla-carousel-react": "^8.5.1",
     "next": "15.1.2",
+    "query-string": "^9.1.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "resend": "^4.0.1",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

@@ -1,4 +1,11 @@
 import { Hero } from "../components/Hero";
+import { Metadata } from "next";
+import { globalConfig } from "@/global-config";
+
+export const metadata: Metadata = {
+  title: `${globalConfig.appName} | Terms & Conditions`,
+  description: "Terms & Conditions for Ben Gurion Airport VIP Services",
+};
 
 export default function TermsConditions() {
   return (

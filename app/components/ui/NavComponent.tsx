@@ -6,6 +6,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Logo } from "./Logo";
 import Link from "next/link";
 import { Button } from "./Button";
+import Image from "next/image";
 
 const Links = [
   { name: "Fast Track", href: "/fastTrack" },
@@ -14,6 +15,7 @@ const Links = [
   { name: "Luxury Transportation", href: "/LuxuryTransportation" },
   { name: "Private Jet", href: "/privateJet" },
   { name: "Contact Us", href: "/contact-us" },
+  { name: "Posts", href: "/posts" },
 ];
 
 export default function NavComponent() {
@@ -66,10 +68,12 @@ export default function NavComponent() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
+              <Image
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg"
                 alt=""
+                width={100}
+                height={100}
               />
             </a>
             <button

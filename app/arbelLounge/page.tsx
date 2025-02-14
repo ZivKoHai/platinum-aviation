@@ -9,9 +9,9 @@ import {
   FaceSmileIcon,
 } from "@heroicons/react/20/solid";
 import { WhyChooseUs } from "../components/whyChooseUs";
-
+import { globalConfig } from "@/global-config";
 export const metadata = {
-  title: "Arbel Lounge | VIP Airport Services",
+  title: `${globalConfig.appName} | Arbel Lounge`,
   description:
     "Experience luxury and comfort at Ben Gurion Airport's Arbel Lounge. Enjoy exclusive amenities, gourmet dining, and premium services in our world-class airport lounge.",
   keywords:

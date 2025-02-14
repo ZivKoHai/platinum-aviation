@@ -1,6 +1,14 @@
 import { Hero } from "../components/Hero";
 import { Description } from "../components/ui/Description";
 import { Contact } from "../components/Contact";
+import { Metadata } from "next";
+import { globalConfig } from "@/global-config";
+
+export const metadata: Metadata = {
+  title: `${globalConfig.appName} | Contact Us`,
+  description: "Contact Us for Sky Vip Ben Gurion",
+  keywords: "Contact Us, Sky Vip Ben Gurion, Airport Services, Car Services",
+};
 
 export default function ContactUs() {
   return (

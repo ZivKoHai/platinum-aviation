@@ -6,9 +6,10 @@ import { H2Aviation } from "../components/ui/H2Aviation";
 import { Paviation } from "../components/ui/Paviation";
 import { ChartItem } from "../components/ui/Chart";
 import { Metadata } from "next";
+import { globalConfig } from "@/global-config";
 
 export const metadata: Metadata = {
-  title: "Private Jet | Platinum",
+  title: `${globalConfig.appName} | Private Jet`,
   description:
     "Experience the ultimate in luxury and convenience with our private jet service. We offer a range of aircraft options, from executive jets to luxurious helicopters, ensuring that you have the perfect ride for any occasion.",
   keywords:

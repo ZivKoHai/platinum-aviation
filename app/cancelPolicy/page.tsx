@@ -1,4 +1,6 @@
+import { Metadata } from "next";
 import { Policy } from "../components/Policy";
+import { globalConfig } from "@/global-config";
 
 const policySections = [
   {
@@ -96,6 +98,13 @@ const policySections = [
     image: "/ben-gurion-vip-5.png", // Random image from the folder
   },
 ];
+
+export const metadata: Metadata = {
+  title: `${globalConfig.appName} | Cancellation Policy`,
+  description: "Cancellation Policy for Sky Vip Ben Gurion",
+  keywords:
+    "Cancellation Policy, Sky Vip Ben Gurion, Airport Services, Car Services",
+};
 
 export default function CancelPolicy() {
   return (

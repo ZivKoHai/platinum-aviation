@@ -6,7 +6,8 @@ import { Seamless } from "./components/Seamless";
 import { FAQ } from "./components/Faq";
 import { GlobalAirport } from "./components/GlobalAirport";
 import { Contact } from "./components/Contact";
-
+import { getAllPosts } from "./lib/wordpress";
+import BlogLatestPosts from "./components/Blog";
 const faq = [
   {
     question: "What is the price for a VIP airport service?",
@@ -27,7 +28,9 @@ const faq = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getAllPosts();
+  console.log(posts);
   return (
     <>
       <Hero />
@@ -35,6 +38,7 @@ export default function Home() {
       <WhyUs />
       <Benefits />
       <Seamless />
+      <BlogLatestPosts />
       <FAQ faqItems={faq} />
       <GlobalAirport />
       <Contact />
