@@ -42,6 +42,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="z94M62gLKLwtaGSaH61W0LkqYqfn0ul5oCs1mjC6T4g"
+        />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" sizes="any" />
         <link rel="preconnect" href="https://www.google.com" />
         <link
