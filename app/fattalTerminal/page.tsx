@@ -4,12 +4,38 @@ import { Description } from "../components/ui/Description";
 import { FAQ } from "../components/Faq";
 import ImagesContainer from "../components/ui/ImagesConatiner";
 import { globalConfig } from "@/global-config";
-export const metadata = {
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: `${globalConfig.appName} | Fattal Terminal`,
   description:
     "Experience the luxury of Fattal Terminal at Ben Gurion Airport. Enjoy exclusive amenities, gourmet dining, and premium services in our world-class airport lounge.",
   keywords:
     "Fattal Terminal, Ben Gurion Airport, VIP lounge, airport services, luxury travel",
+  openGraph: {
+    title: `${globalConfig.appName} | Fattal Terminal`,
+    description:
+      "Experience the luxury of Fattal Terminal at Ben Gurion Airport. Enjoy exclusive amenities, gourmet dining, and premium services in our world-class airport lounge.",
+    images: [{ url: "/fattal-terminal/fattal-terminal-2.jpg" }],
+    type: "website",
+    url: `${globalConfig.siteUrl}/fattalTerminal`,
+    siteName: globalConfig.appName,
+    locale: "en_IL",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${globalConfig.appName} | Fattal Terminal`,
+    description:
+      "Experience the luxury of Fattal Terminal at Ben Gurion Airport. Enjoy exclusive amenities, gourmet dining, and premium services in our world-class airport lounge.",
+    images: [{ url: "/fattal-terminal-2.jpg" }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: `${globalConfig.siteUrl}/fattalTerminal`,
+  },
 };
 
 const Tabs = [

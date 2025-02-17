@@ -7,7 +7,6 @@ import Image from "next/image";
 
 export default async function Posts() {
   const posts = await getAllPosts();
-  console.log(posts);
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-16">

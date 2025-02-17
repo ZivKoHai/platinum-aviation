@@ -17,6 +17,30 @@ export const metadata: Metadata = {
     "Experience the ultimate in luxury and comfort with Sky Vip's luxury car service. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a seamless and luxurious transportation experience tailored to your needs.",
   keywords:
     "luxury transport ben gurion, luxury car service, private car service, luxury transportation, luxury car service ben gurion, private car service ben gurion, luxury transportation ben gurion, luxury car service ben gurion, private car service ben gurion, luxury transportation ben gurion  ",
+  openGraph: {
+    title: `${globalConfig.appName} | Luxury Transportation `,
+    description:
+      "Experience the ultimate in luxury and comfort with Sky Vip's luxury car service. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a seamless and luxurious transportation experience tailored to your needs.",
+    images: [{ url: "/luxury-transport/luxury-transport- (2).jpeg" }],
+    type: "website",
+    url: `${globalConfig.siteUrl}/LuxuryTransportation`,
+    siteName: globalConfig.appName,
+    locale: "en_IL",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${globalConfig.appName} | Luxury Transportation `,
+    description:
+      "Experience the ultimate in luxury and comfort with Sky Vip's luxury car service. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a seamless and luxurious transportation experience tailored to your needs.",
+    images: [{ url: "/luxury-transport/luxury-transport- (2).jpeg" }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: `${globalConfig.siteUrl}/LuxuryTransportation`,
+  },
 };
 
 const faq = [

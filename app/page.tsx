@@ -6,7 +6,6 @@ import { Seamless } from "./components/Seamless";
 import { FAQ } from "./components/Faq";
 import { GlobalAirport } from "./components/GlobalAirport";
 import { Contact } from "./components/Contact";
-import { getAllPosts } from "./lib/wordpress";
 import BlogLatestPosts from "./components/Blog";
 const faq = [
   {
@@ -29,8 +28,6 @@ const faq = [
 ];
 
 export default async function Home() {
-  const posts = await getAllPosts();
-  console.log(posts);
   return (
     <>
       <Hero />

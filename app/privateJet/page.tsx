@@ -14,6 +14,30 @@ export const metadata: Metadata = {
     "Experience the ultimate in luxury and convenience with our private jet service. We offer a range of aircraft options, from executive jets to luxurious helicopters, ensuring that you have the perfect ride for any occasion.",
   keywords:
     "private jet, luxury jet, executive jet, helicopter, luxury transportation",
+  openGraph: {
+    title: `${globalConfig.appName} | Private Jet`,
+    description:
+      "Experience the ultimate in luxury and convenience with our private jet service. We offer a range of aircraft options, from executive jets to luxurious helicopters, ensuring that you have the perfect ride for any occasion.",
+    images: [{ url: "jet-service/Private-Jet- (8) (1).jpg" }],
+    type: "website",
+    url: `${globalConfig.siteUrl}/privateJet`,
+    siteName: globalConfig.appName,
+    locale: "en_IL",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${globalConfig.appName} | Private Jet`,
+    description:
+      "Experience the ultimate in luxury and convenience with our private jet service. We offer a range of aircraft options, from executive jets to luxurious helicopters, ensuring that you have the perfect ride for any occasion.",
+    images: [{ url: "jet-service/Private-Jet- (8) (1).jpg" }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: `${globalConfig.siteUrl}/privateJet`,
+  },
 };
 
 export default function PrivateJet() {
@@ -84,17 +108,20 @@ export default function PrivateJet() {
       </div>
       <Description id="gallery" title="gallery" />
       <section id="gallery" className="gallery wDyn my-20">
-        {Array.from({ length: 10 }).map((_, index) => (
-          <Image
-            src={`/jet-service/Private-jet- (${index + 1}).jpg`}
-            alt="private jet israel"
-            width={300}
-            height={300}
-            key={index}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="rounded-[10px] overflow-hidden "
-          />
-        ))}
+        {Array.from({ length: 10 }).map((_, index) => {
+          const imageSrc = `/jet-service/Private-Jet-(${index + 10}).jpg`;
+          return (
+            <Image
+              src={imageSrc}
+              alt="private jet israel"
+              width={300}
+              height={300}
+              key={index}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="rounded-[10px] overflow-hidden"
+            />
+          );
+        })}
       </section>
     </>
   );

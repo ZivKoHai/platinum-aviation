@@ -10,12 +10,39 @@ import {
 } from "@heroicons/react/20/solid";
 import { WhyChooseUs } from "../components/whyChooseUs";
 import { globalConfig } from "@/global-config";
-export const metadata = {
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: `${globalConfig.appName} | Arbel Lounge`,
   description:
     "Experience luxury and comfort at Ben Gurion Airport's Arbel Lounge. Enjoy exclusive amenities, gourmet dining, and premium services in our world-class airport lounge.",
   keywords:
     "Arbel Lounge, Ben Gurion Airport, VIP lounge, airport services, luxury travel",
+  openGraph: {
+    title: `${globalConfig.appName} | Arbel Lounge`,
+    description:
+      "Experience luxury and comfort at Ben Gurion Airport's Arbel Lounge. Enjoy exclusive amenities, gourmet dining, and premium services in our world-class airport lounge.",
+    images: "/arbel-lounge/arbel-lounge- 4.jpg",
+    type: "website",
+    url: `${globalConfig.siteUrl}/arbelLounge`,
+    siteName: globalConfig.appName,
+    locale: "en_IL",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: `${globalConfig.appName} | Arbel Lounge`,
+    description:
+      "Experience luxury and comfort at Ben Gurion Airport's Arbel Lounge. Enjoy exclusive amenities, gourmet dining, and premium services in our world-class airport lounge.",
+    images: "/arbel-lounge/arbel-lounge- 4.jpg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: `${globalConfig.siteUrl}/arbelLounge`,
+  },
 };
 
 export default function ArbelLounge() {

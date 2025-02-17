@@ -17,6 +17,28 @@ export const metadata: Metadata = {
   title: `${globalConfig.appName} | Fast Track`,
   description: "Fast Track at Ben Gurion Airport",
   keywords: "Fast Track, Ben Gurion Airport, VIP Service, Airport Experience",
+  openGraph: {
+    title: `${globalConfig.appName} | Fast Track`,
+    description: "Fast Track at Ben Gurion Airport",
+    images: [{ url: "/fast-track.webp" }],
+    type: "website",
+    url: `${globalConfig.siteUrl}/fastTrack`,
+    siteName: globalConfig.appName,
+    locale: "en_IL",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${globalConfig.appName} | Fast Track`,
+    description: "Fast Track at Ben Gurion Airport",
+    images: "/fast-track.webp",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: `${globalConfig.siteUrl}/fastTrack`,
+  },
 };
 
 const arrivalProcess = [
@@ -146,9 +168,9 @@ export default function FastTrack() {
           </h2>
           <p className="text-base tracking-tight">
             We take the hassle out of airport travel, providing you with a
-            stress-free experience that will leave you feeling like a VIP. Don’t
-            settle for anything less than the best – choose our Fast Track
-            airport VIP service for an unforgettable airport experience.
+            stress-free experience that will leave you feeling like a VIP.
+            Don&apos;t settle for anything less than the best – choose our Fast
+            Track airport VIP service for an unforgettable airport experience.
           </p>
           <Button>Book Now</Button>
         </div>

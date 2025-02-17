@@ -4,6 +4,8 @@ import { globalConfig } from "@/global-config";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+export const revalidate = 10800;
+
 export async function generateStaticParams() {
   const posts = await getAllPosts();
   return posts.map((post) => ({
@@ -20,6 +22,7 @@ export async function generateMetadata({
   const post = await getPostBySlug(slug);
 
   return {
+    metadataBase: new URL(globalConfig.siteUrl),
     title: `${globalConfig.siteName} - ${post.title.rendered} `,
     description: post.yoast_head_json.og_description,
     image: post.yoast_head_json.og_image?.[0]?.url,
@@ -61,7 +64,6 @@ export default async function Post({
 }) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-  console.log(post);
 
   if (!post) {
     return notFound();
