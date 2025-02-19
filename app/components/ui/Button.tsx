@@ -1,6 +1,6 @@
 export function Button({
   children,
-  href = "https://wa.me/972527772564",
+  href = "https://wa.me/972506877555",
   ...props
 }: {
   children: React.ReactNode;

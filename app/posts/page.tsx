@@ -8,10 +8,10 @@ import Image from "next/image";
 export default async function Posts() {
   const posts = await getAllPosts();
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 text-textColor">
       <div className="text-center mb-16">
         <span className="text-sm uppercase tracking-wider">NEWS</span>
-        <h1 className="text-6xl font-light mt-4 mb-6">
+        <h1 className="text-6xl font-light mt-4 mb-6 font-serif ">
           Insightful Stories,
           <br />
           Latest Updates
@@ -46,7 +46,7 @@ export default async function Posts() {
                 </div>
               )}
               <div className="space-y-2">
-                <h2 className="text-2xl font-normal  transition-colors">
+                <h2 className="text-2xl font-normal font-serif transition-colors">
                   {post.title.rendered}
                 </h2>
                 <div

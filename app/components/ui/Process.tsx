@@ -22,7 +22,7 @@ export const Process = ({ tabs, isTab }: ProcessProps) => {
           {tabs.map((tab, index) => (
             <div
               key={index}
-              className={`h-full basis-1/3 flex items-center justify-center font-medium cursor-pointer transition-all duration-300 ease-in-out ${
+              className={`h-full basis-1/3 flex items-center justify-center font-medium cursor-pointer transition-all duration-300 ease-in-out text-textColor ${
                 tabActive === index
                   ? "border-b-[1px] pb-4 border-textColor"
                   : ""

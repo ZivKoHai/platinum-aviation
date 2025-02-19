@@ -31,7 +31,7 @@ export function Hero({
         />
         <div className="absolute inset-0 bg-black/30 rounded-none sm:rounded-[10px]" />
       </div>
-      <span className="text-lg w-full md:w-auto capitalize font-medium text-left sm:text-center text-white z-10">
+      <span className="text-lg w-full md:w-auto capitalize font-medium text-left sm:text-center text-textColor z-10">
         {subtitle}
       </span>
       <H1Aviation>
@@ -44,7 +44,7 @@ export function Hero({
             ))
           : title}
       </H1Aviation>
-      <p className="text-white z-10 w-full md:w-[50%] text-left sm:text-center">
+      <p className="text-textColor z-10 w-full md:w-[50%] text-left sm:text-center">
         {description}
       </p>
     </div>

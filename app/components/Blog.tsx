@@ -13,7 +13,7 @@ export default async function BlogLatestPosts() {
             From the blog
           </h2>
           <p className="mt-2 text-lg/8 text-textColor">
-            An anthology of news, updates, and stories from Sky VIP Ben Gurion.
+            News, updates, and stories from Sky VIP
           </p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -29,17 +29,11 @@ export default async function BlogLatestPosts() {
                 >
                   {formatDate(post.date)}
                 </time>
-                <a
-                  href={`/posts/${post.slug}`}
-                  className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-textColor hover:bg-gray-100"
-                >
-                  {post.title.rendered}
-                </a>
               </div>
               <div className="group relative">
-                <h3 className="mt-3 text-lg/6 font-semibold text-textColor group-hover:text-textColor">
+                <h3 className="mt-3 text-lg/6 font-semibold text-textColor  group-hover:text-textColor">
                   <a href={`/posts/${post.slug}`}>
-                    <span className="absolute inset-0" />
+                    <span className="absolute inset-0 " />
                     {post.title.rendered}
                   </a>
                 </h3>

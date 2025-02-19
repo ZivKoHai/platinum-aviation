@@ -75,7 +75,7 @@ export default async function Post({
         <div className="bg-foreground text-background text-sm px-3 py-1 rounded-full">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
         </div>
-        <h1 className=" font-light text-4xl sm:text-7xl text-center">
+        <h1 className=" font-light text-4xl sm:text-7xl text-center font-serif">
           {post.title.rendered}
         </h1>
       </div>

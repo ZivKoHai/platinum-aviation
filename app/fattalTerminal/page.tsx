@@ -251,7 +251,7 @@ export default function FattalTerminal() {
         description="Our passengers at Fattal lounge tlv follow a seamless process before their departure. This includes a warm welcome at the terminal by our crew, followed by a security check, check-in, security mirroring, passport control, and finally, The passengers is chauffeured to their gate/aircraft in luxury by a private driver. We offer various waiting options, as stated below."
       />
       <section id="departures" className="wDyn h-fit py-10">
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="flex flex-col items-center justify-center gap-4 text-textColor">
           <h2 className="text-4xl text-left w-full font-medium">Departures</h2>
           <p className="text-base tracking-tight">
             Our passengers at Fattal lounge tlv follow a seamless process before
@@ -268,7 +268,7 @@ export default function FattalTerminal() {
         <ImagesContainer images={Images} />
       </section>
       <section id="arrival" className="wDyn h-fit py-10">
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="flex flex-col items-center justify-center gap-4 text-textColor">
           <h2 className="text-4xl text-left w-full font-medium">Arrivals</h2>
           <p className="text-base tracking-tight">
             Our passengers at the Fattal Lounge TLV enjoy a seamless arrival

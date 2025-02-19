@@ -204,7 +204,7 @@ export default function FastTrack() {
         />
       </section>
       <section id="arrival" className="wDyn h-fit py-10">
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="flex flex-col items-center justify-center gap-4 text-textColor">
           <h2 className="text-4xl text-left w-full font-medium font-serif">
             Arrivals
           </h2>
@@ -220,7 +220,7 @@ export default function FastTrack() {
         <Process tabs={arrivalProcess} isTab={true} />
       </section>
       <section id="departures" className="wDyn h-fit py-10">
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="flex flex-col items-center justify-center gap-4 text-textColor">
           <h2 className="text-4xl text-left w-full font-medium font-serif">
             Departures
           </h2>

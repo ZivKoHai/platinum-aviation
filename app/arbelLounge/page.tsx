@@ -165,7 +165,7 @@ export default function ArbelLounge() {
             and unwind before your journey."
       />
       <section className="wDyn">
-        <h3 className="text-pretty text-2xl font-medium tracking-tight text-foreground sm:text-2xl">
+        <h3 className="text-pretty text-2xl font-medium tracking-tight  sm:text-2xl text-textColor">
           Departure Process
         </h3>
         <Process tabs={Tabs} isTab={false} />

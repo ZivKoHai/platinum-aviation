@@ -40,12 +40,10 @@ export default {
             h2: {
               "font-weight": 200,
               color: "var(--foreground)",
-              fontSize: "2.5rem",
             },
             h3: {
               "font-weight": 200,
               color: "var(--foreground)",
-              fontSize: "2rem",
             },
             h4: {
               "font-weight": 200,

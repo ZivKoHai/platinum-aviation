@@ -53,8 +53,8 @@ export default function PrivateJet() {
         description="Our private jet service is designed to provide you with the ultimate luxury transportation experience. We offer a wide range of aircraft options, from executive jets to luxurious helicopters, ensuring that you have the perfect ride for any occasion."
       />
       <div className="wDyn py-20 grid grid-cols-1 sm:grid-cols-2 gap-10">
-        <div className="flex flex-col gap-4 justify-center ">
-          <h2 className="text-4xl text-left w-full font-medium">
+        <div className="flex flex-col gap-4 justify-center text-textColor">
+          <h2 className="text-4xl text-left w-full font-medium font-serif ">
             Platinum Private Jet Service
           </h2>
           <p className="text-base tracking-tight">

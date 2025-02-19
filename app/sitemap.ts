@@ -26,7 +26,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return allPages.map((page) => {
     const isPost = page.startsWith("posts/");
     const post = isPost ? posts.find((p) => `posts/${p.slug}` === page) : null;
-    const lastModified = post ? post.modified : null;
+    const lastModified = post ? post.modified.split("T")[0] : null;
 
     let priority = 0.8;
     if (page === "") priority = 1.0;

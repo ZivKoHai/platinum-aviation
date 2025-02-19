@@ -145,7 +145,7 @@ export default function LuxuryTransportation() {
         description="Our luxury car service offers a seamless and luxurious transportation experience tailored to your needs. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a stress-free and comfortable ride."
       />
       <div className="wDyn py-20 grid grid-cols-1 sm:grid-cols-2 gap-10">
-        <div className="flex flex-col gap-4 justify-center ">
+        <div className="flex flex-col gap-4 justify-center text-textColor">
           <h2 className="text-4xl text-left w-full font-serif">
             Sky Vip Private Car Service
           </h2>
@@ -175,7 +175,7 @@ export default function LuxuryTransportation() {
         description="Sky Vip private car service offers a seamless and luxurious transportation experience tailored to your needs. Whether you're attending a business meeting, a special event, or exploring a new city, our private car service ensures a stress-free and comfortable ride."
         benefits={benefits}
         image={{
-          src: "/luxury-transport/luxury-transport (2).jpg",
+          src: "/luxury-transport/luxury-transport- (2).jpeg",
           alt: "ben gurion airport",
           width: 2432,
           height: 1442,
