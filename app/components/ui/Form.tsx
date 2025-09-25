@@ -22,50 +22,16 @@ export const Form = () => {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>(
     {}
   );
-  const [recaptchaError, setRecaptchaError] = useState<string>("");
 
   const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setRecaptchaError("");
 
     try {
       const formData = new FormData(e.target as HTMLFormElement);
       const data = Object.fromEntries(formData.entries());
       const validatedData = formSchema.parse(data);
-
-      // Make sure reCAPTCHA is loaded
-      if (typeof window === "undefined" || !window.grecaptcha) {
-        setRecaptchaError("reCAPTCHA failed to load. Please refresh the page.");
-        throw new Error("reCAPTCHA has not loaded");
-      }
-
-      // Ensure site key is available
-      const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-      if (!siteKey) {
-        setRecaptchaError(
-          "reCAPTCHA configuration error. Please try again later."
-        );
-        throw new Error("reCAPTCHA site key is missing");
-      }
-
-      // Wait for reCAPTCHA to be ready and execute
-      const token = await new Promise<string>((resolve, reject) => {
-        window.grecaptcha.ready(async () => {
-          try {
-            const token = await window.grecaptcha.execute(siteKey, {
-              action: "submit",
-            });
-            resolve(token);
-          } catch (error) {
-            reject(error);
-          }
-        });
-      });
-
-      // Reset errors if validation passes
-      setErrors({});
 
       // Send to API
       const response = await fetch("/api/email", {
@@ -73,7 +39,7 @@ export const Form = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...validatedData, recaptchaToken: token }),
+        body: JSON.stringify({ ...validatedData }),
       });
 
       if (!response.ok) {
@@ -98,9 +64,6 @@ export const Form = () => {
         setErrors(fieldErrors);
       } else {
         // Handle other errors (including reCAPTCHA errors)
-        if (!recaptchaError) {
-          setRecaptchaError("An error occurred. Please try again.");
-        }
       }
       console.error("Validation error:", error);
     }
@@ -162,10 +125,6 @@ export const Form = () => {
       >
         Submit
       </button>
-
-      {recaptchaError && (
-        <span className="text-red-500 text-sm mt-2">{recaptchaError}</span>
-      )}
     </form>
   );
 };

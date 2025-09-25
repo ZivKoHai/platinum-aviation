@@ -10,6 +10,7 @@
     "email": "email dev --dir app/emails"
   },
   "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.896.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@react-email/components": "0.0.31",
