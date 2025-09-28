@@ -113,7 +113,7 @@ export const Form = () => {
       </div>
       <Input
         name="numberOfLuggage"
-        type="number"
+        type="text"
         placeholder="Number of Luggage"
       />
       {errors.numberOfLuggage && (

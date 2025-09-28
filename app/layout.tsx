@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Serif_Display } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Noto_Serif_Display,
+  Bebas_Neue,
+} from "next/font/google";
+import Script from "next/script";
+import { globalConfig } from "../global-config";
+
 import "./globals.css";
 import { Footer } from "./components/Footer";
-import { Bebas_Neue } from "next/font/google";
-import Script from "next/script";
 import NavComponent from "./components/ui/NavComponent";
+import AnnoucementBar from "./components/annoucement-bar";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -29,6 +36,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(globalConfig.siteUrl),
   title: "Sky Vip Aviation",
   description:
     "Ben gurion airport vip | fast track ben gurion | vip ben gurion",
@@ -61,6 +69,7 @@ export default function RootLayout({
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
           strategy="beforeInteractive"
         />
+        <AnnoucementBar announcement="Starting from October 10th, 2025, Arbel Lounge will be closed till further notice." />
         <NavComponent />
         {children}
         <Footer />

@@ -1,3 +1,8 @@
+import GlobalAirports from "./global-airports";
+import { H1Aviation } from "./ui/H1Aviation";
+
+//----------------------------------------
+
 export const GlobalAirport = () => {
   return (
     <div className="relative">
@@ -8,17 +13,19 @@ export const GlobalAirport = () => {
           backgroundImage: "url('/global-airports.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          filter: "brightness(0.6)",
+          filter: "brightness(0.4)",
         }}
       />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <H1Aviation className="text-center">
+            {" "}
             for any inquiries about specific global airports,please contact us
-          </h1>
+          </H1Aviation>
         </div>
+        <GlobalAirports />
       </div>
     </div>
   );

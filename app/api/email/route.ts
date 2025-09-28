@@ -1,11 +1,13 @@
 "use server";
 
 import { NextResponse } from "next/server";
-import { SendEmailCommand, SESv2Client } from "@aws-sdk/client-sesv2";
 
 import { z } from "zod";
+import { Resend } from "resend";
 
 //----------------------------------------
+
+const emailRecipients = ["ziv.kali656@gmail.com", "vip@bengurionairport.com"];
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -16,13 +18,7 @@ const formSchema = z.object({
   flightTime: z.string().min(1, "Flight time is required"),
 });
 
-const client = new SESv2Client({
-  region: process.env.REGION as string,
-  credentials: {
-    accessKeyId: process.env.ACCESS_KEY_ID as string,
-    secretAccessKey: process.env.SECRET_ACCESS_KEY as string,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -39,27 +35,12 @@ export async function POST(request: Request) {
     const { name, email, phone, flight, numberOfPassengers, flightTime } =
       validatedData;
 
-    const command = new SendEmailCommand({
-      FromEmailAddress: "info@airportfastrack.com",
-      Destination: {
-        ToAddresses: [
-          email,
-          "vip@bengurionairport.com",
-          "ziv.kali656@gmail.com",
-        ],
-      },
-      Content: {
-        Simple: {
-          Subject: {
-            Data: "thank you for your submission",
-          },
-          Body: {
-            Text: {
-              Data: "thank you for your submission",
-            },
-            Html: {
-              Data: `
-                <!DOCTYPE html>
+    const resp = await resend.emails.send({
+      from: "info@airportfastrack.com",
+      to: [email, ...emailRecipients],
+      subject: "thank you for your submission",
+      html: `
+                 <!DOCTYPE html>
                 <html>
                   <head>
                     <meta charset="UTF-8">
@@ -100,14 +81,8 @@ export async function POST(request: Request) {
                     </div>
                   </body>
                 </html>
-              `,
-            },
-          },
-        },
-      },
+      `,
     });
-
-    const resp = await client.send(command);
 
     console.log(resp);
 

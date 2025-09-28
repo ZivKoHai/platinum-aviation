@@ -33,11 +33,15 @@ export const SelectInput = ({
         defaultValue={defaultValue}
         className="border-b-[0.5px] border-textColor p-2 bg-transparent placeholder:text-textColor w-full"
       >
-        <option value="" disabled>
+        <option className="text-black" value="" disabled>
           {placeholder}
         </option>
         {options.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option
+            className="text-black"
+            key={option.value}
+            value={option.value}
+          >
             {option.label}
           </option>
         ))}

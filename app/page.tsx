@@ -1,22 +1,17 @@
 import { Hero } from "./components/Hero";
-import { SubHero } from "./components/SubHero";
 import { WhyUs } from "./components/WhyUs";
-import { Benefits } from "./components/Benefits";
 import { Seamless } from "./components/Seamless";
 import { FAQ } from "./components/Faq";
 import { GlobalAirport } from "./components/GlobalAirport";
 import { Contact } from "./components/Contact";
 import BlogLatestPosts from "./components/Blog";
 import { Metadata } from "next";
+import Benefits2 from "./components/benefits-2";
+import ServicesSection from "./components/services-section";
+
+//----------------------------------------
+
 const faq = [
-  {
-    question: "What is the price for a VIP airport service?",
-    answer: "The price for a VIP airport service is $100 per person.",
-  },
-  {
-    question: "What is the price for a VIP airport service?",
-    answer: "The price for a VIP airport service is $100 per person.",
-  },
   {
     question: "Can I cancel or modify my booking?",
     answer:
@@ -24,7 +19,18 @@ const faq = [
   },
   {
     question: "What is the price for a VIP airport service?",
-    answer: "The price for a VIP airport service is $100 per person.",
+    answer:
+      "The price for a VIP airport service depends on the service you choose.",
+  },
+  {
+    question: "how do i contact you?",
+    answer:
+      "You can contact us by phone or email. Our phone numbers are +1-(929)-563-2500 and +972052-777-2564. Our email is vip@bengurionairport.com.",
+  },
+  {
+    question: "why should i use fast track at Ben Gurion Airport?",
+    answer:
+      "Fast Track at Ben Gurion Airport allows you to skip the long lines at security and passport control, ensuring a smoother, faster airport experience.",
   },
 ];
 
@@ -64,9 +70,9 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <SubHero />
+      <ServicesSection />
       <WhyUs />
-      <Benefits />
+      <Benefits2 />
       <Seamless />
       <BlogLatestPosts />
       <FAQ faqItems={faq} />
