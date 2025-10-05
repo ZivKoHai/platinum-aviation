@@ -58,6 +58,19 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${notoSerifDisplay.variable} antialiased`}
       >
         <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-5BY4585DZZ"
+          strategy="beforeInteractive"
+        ></Script>
+        <Script>
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5BY4585DZZ');
+  `}
+        </Script>
+        <Script
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
           strategy="beforeInteractive"
         />
