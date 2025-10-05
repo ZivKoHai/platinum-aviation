@@ -67,9 +67,9 @@ export const Footer = () => {
         </div>
       </footer>
 
-      <div className="border-t border-white py-5 h-15 flex sm:flex-row flex-col justify-between w-full bg-black text-white px-10">
+      <div className="border-t space-y-4 border-white py-5 h-15 flex sm:flex-row flex-col justify-between w-full bg-black text-white px-10">
         <div>
-          <p>© 2025 Ben Gurion Airport VIP Services</p>
+          <p>© {new Date().getFullYear()} Ben Gurion Airport VIP Services</p>
         </div>
         <div className="flex flex-row gap-10">
           <Link href="/terms-conditions">Terms & Conditions</Link>

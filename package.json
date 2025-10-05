@@ -10,11 +10,13 @@
     "email": "email dev --dir app/emails"
   },
   "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.896.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@react-email/components": "0.0.31",
     "@react-email/font": "0.0.9",
     "embla-carousel-react": "^8.5.1",
+    "lucide-react": "^0.544.0",
     "next": "15.1.2",
     "query-string": "^9.1.1",
     "react": "19.0.0",

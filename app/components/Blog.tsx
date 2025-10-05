@@ -6,7 +6,7 @@ export default async function BlogLatestPosts() {
   const posts = await getAllPosts();
 
   return (
-    <div className="bg-background py-24 sm:py-32">
+    <section id="blogs" className="wDyn bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-normal font-serif tracking-tight text-pretty text-textColor sm:text-5xl">
@@ -66,6 +66,6 @@ export default async function BlogLatestPosts() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: `${globalConfig.appName} | Private Jet`,
     description:
       "Experience the ultimate in luxury and convenience with our private jet service. We offer a range of aircraft options, from executive jets to luxurious helicopters, ensuring that you have the perfect ride for any occasion.",
-    images: [{ url: "jet-service/Private-Jet- (8) (1).jpg" }],
+    images: [{ url: "/jet-service/Private-Jet-1.png" }],
     type: "website",
     url: `${globalConfig.siteUrl}/privateJet`,
     siteName: globalConfig.appName,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: `${globalConfig.appName} | Private Jet`,
     description:
       "Experience the ultimate in luxury and convenience with our private jet service. We offer a range of aircraft options, from executive jets to luxurious helicopters, ensuring that you have the perfect ride for any occasion.",
-    images: [{ url: "jet-service/Private-Jet- (8) (1).jpg" }],
+    images: [{ url: "/jet-service/Private-Jet-1.png" }],
   },
   robots: {
     index: true,
@@ -68,11 +68,11 @@ export default function PrivateJet() {
         </div>
         <div className="flex flex-col gap-4">
           <Image
-            src="/platinum-jet-service-2.webp"
+            src="/jet-service/Private-Jet-3.png"
             alt="private jet"
             width={500}
             height={500}
-            className="rounded-[10px]"
+            className="rounded-[10px] object-cover"
           />
         </div>
       </div>
@@ -108,8 +108,8 @@ export default function PrivateJet() {
       </div>
       <Description id="gallery" title="gallery" />
       <section id="gallery" className="gallery wDyn my-20">
-        {Array.from({ length: 10 }).map((_, index) => {
-          const imageSrc = `/jet-service/Private-Jet-(${index + 10}).jpg`;
+        {Array.from({ length: 11 }).map((_, index) => {
+          const imageSrc = `/jet-service/Private-Jet-${index + 1}.png`;
           return (
             <Image
               src={imageSrc}
